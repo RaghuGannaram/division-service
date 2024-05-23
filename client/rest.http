@@ -1,3 +1,4 @@
+##################################################### local instance
 ###  health check
 GET http://localhost:5004/health-check HTTP/1.1
 
@@ -8,4 +9,17 @@ Content-Type: application/json
 {
     "number1": "10",
     "number2": 10
+}
+
+################################################### container instance
+###  health check
+GET http://localhost:9004/health-check HTTP/1.1
+
+### division
+POST http://localhost:9004/api/v1/division HTTP/1.1
+Content-Type: application/json
+
+{
+    "number1": "10",
+    "number2": 0
 }
