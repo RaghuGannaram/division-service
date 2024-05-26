@@ -11,7 +11,7 @@ docker container run \
 > --publish 9004:9004 \
 > --network calculation-microservices-network \
 > --env LOG_LEVEL=debug \
-> --mount type=bind,source="$(pwd)/Docker/logs",target=/app/logs \
+> --mount type=bind,source="$(pwd)/_docker/logs",target=/app/logs \
 > raghugannaram/division-service:1.0.0
 
 ```
